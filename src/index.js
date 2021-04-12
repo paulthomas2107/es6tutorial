@@ -1,3 +1,5 @@
+import { Teacher } from "./teacher";
+
 // var -> function
 // let  -> block
 // const -> block cannot be reassigned
@@ -84,10 +86,52 @@ console.log(activeJobs3);
 // Arrow functions and this
 const human = {
   talk() {
-    setTimeout(function () {
+    setTimeout(() => {
       console.log("this", this);
     }, 1000);
   },
 };
 
 human.talk();
+
+// Array.map()
+const colors = ["red", "green", "blue"];
+const items = colors.map((color) => `<li>${color}</li>`);
+console.log(items);
+
+// Object destructuring
+const address = {
+  street: "12 Downing Street",
+  city: "London",
+  country: "UK",
+};
+
+const { street, city: town, country } = address;
+console.log(street, town, country);
+
+// Spread ... operator
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+const combined = [...first, ...second];
+console.log(combined);
+const clone = [...first];
+console.log(clone);
+const one = { name: "Paul" };
+const two = { job: "Developer" };
+const three = { ...one, ...two, location: "Manchester" };
+console.log(three);
+const clone2 = { ...one };
+console.log(clone2);
+
+// Classes
+const man = {
+  name: "Paul",
+};
+console.log(man);
+
+// Inheritance
+const teacher1 = new Teacher("Paulie", "PHD");
+teacher1.teach();
+teacher1.walk();
+
+// Modules
