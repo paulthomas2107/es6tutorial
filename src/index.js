@@ -1,4 +1,4 @@
-import { Teacher } from "./teacher";
+import Teacher, { promote } from "./teacher";
 
 // var -> function
 // let  -> block
@@ -135,3 +135,4 @@ teacher1.teach();
 teacher1.walk();
 
 // Modules
+promote();

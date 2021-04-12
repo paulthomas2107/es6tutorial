@@ -1,4 +1,4 @@
-export class ManClass {
+export default class ManClass {
   constructor(name) {
     this.name = name;
   }

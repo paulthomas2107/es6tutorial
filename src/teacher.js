@@ -1,6 +1,10 @@
-import { ManClass } from "./man";
+import ManClass from "./man";
 
-export class Teacher extends ManClass {
+export function promote() {
+  console.log("I promote....");
+}
+
+export default class Teacher extends ManClass {
   constructor(name, degree) {
     super(name);
     this.degree = degree;
